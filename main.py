@@ -17,25 +17,25 @@ class KeywordQueryEventListener(EventListener):
         query = event.get_argument() or ""
 
         if not query:
-            # Jika tidak ada perintah, tampilkan placeholder
+            # If no command is entered, show placeholder
             return RenderResultListAction(
                 [
                     ExtensionResultItem(
-                        icon="images/icon.png",  # Sesuaikan dengan path icon Anda
-                        name="Masukkan perintah terminal",
-                        description="Contoh: ls, pwd, ps aux",
+                        icon="images/icon.png",  # Adjust to your icon path
+                        name="Enter terminal command",
+                        description="Examples: ls, pwd, ps aux",
                         on_enter=RunScriptAction("kitty"),
                     )
                 ]
             )
 
-        # Jika ada perintah, jalankan di terminal
+        # If command is entered, execute in terminal
         return RenderResultListAction(
             [
                 ExtensionResultItem(
-                    icon="images/icon.png",  # Sesuaikan dengan path icon Anda
-                    name=f"Jalankan: {query}",
-                    description=f'Eksekusi "{query}" di terminal',
+                    icon="images/icon.png",  # Adjust to your icon path
+                    name=f"Run: {query}",
+                    description=f'Execute "{query}" in terminal',
                     on_enter=RunScriptAction(f'kitty bash -c "{query}; exec bash"'),
                 )
             ]

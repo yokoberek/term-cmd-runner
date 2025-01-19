@@ -1,7 +1,7 @@
 {
     "required_api_version": "^2.0.0",
     "name": "Terminal Runner",
-    "description": "Menjalankan perintah terminal langsung dari ULauncher",
+    "description": "Run terminal commands directly from ULauncher",
     "developer_name": "Yokoberek",
     "icon": "images/icon.png",
     "options": {
@@ -12,7 +12,7 @@
             "id": "kw",
             "type": "keyword",
             "name": "Keyword",
-            "description": "Keyword untuk memicu ekstensi",
+            "description": "Keyword to trigger the extension",
             "default_value": "_"
         }
     ]
