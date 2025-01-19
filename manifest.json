@@ -1,0 +1,19 @@
+{
+    "required_api_version": "^2.0.0",
+    "name": "Terminal Runner",
+    "description": "Menjalankan perintah terminal langsung dari ULauncher",
+    "developer_name": "YourName",
+    "icon": "images/icon.png",
+    "options": {
+        "query_debounce": 0.1
+    },
+    "preferences": [
+        {
+            "id": "kw",
+            "type": "keyword",
+            "name": "Keyword",
+            "description": "Keyword untuk memicu ekstensi",
+            "default_value": "t"
+        }
+    ]
+}
